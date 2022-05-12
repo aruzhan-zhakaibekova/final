@@ -25,14 +25,13 @@ body {
     margin-bottom: 1em;
     padding: 0.3rem 1rem;
     border: 1px solid #c2c7cc;
-    font-family: 'Open-Sans', sans-serif;
     font-size: 1.1em;
     line-height: 1.667em;
     text-decoration: none;
     color: cadetblue;
     cursor: pointer;
     background: #fff;
-    transition: color,border-color ease 0.3s;
+    transition: color, border-color ease 0.3s;
     border-radius: 2em;
 }
 .homebutton a:hover {
@@ -237,7 +236,62 @@ h1 {
   font-size: 0.6rem;
 }
 
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 26px;
+  }
+  .projects h1 {
+    font-size: 200%;
+  }
 
+  .projects h3 {
+    font-size: 130%;
+  }
+  .projects p, a {
+    font-size: 110%;
+  }
+  .homebutton {
+    padding: 2rem;
+  }
+  .homebutton a {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .projects-container .project-card {
+    margin-left: 14rem;
+    text-align: center;
+  }
+  .contact {
+    padding-top: 8rem;
+    padding-right: 14rem;
+  }
+  .contact-form {
+    min-width: 150%;
+    min-height: 150%;
+  }
+
+  .contact h2 {
+    font-size: 200%;
+  }
+
+  .homebutton {
+    width: 10rem;
+  }
+  .socials {
+    bottom: 40%;
+  }
+  .socicon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .footer {
+    bottom: -10%;
+    right: 10rem;
+  }
+
+}
 
 @media screen and (max-width: 480px){
   html {
@@ -327,10 +381,4 @@ h1 {
     display: block;
     bottom: 30%;
     left: 50%;
-  }
-
-  @media screen and (min-width: 4000px){
-    html {
-      font-size: 24px;
-    }
   }

@@ -58,22 +58,7 @@ input {
   z-index: 1;
   top: 136px;
 }
-/*
-.hamburger:after {
-  visibility: hidden;
-  content: "";
-  display: block;
-  border-top: 2px solid #fff;
-  margin-top: 4px;
-}
-.hamburger:before {
-visibility: hidden;
-  content: "";
-  display: block;
-  border-top: 2px solid #fff;
-  margin-top: 4px;
-}
-*/
+
 .plus {
   display: none;
   width: 20px;
@@ -88,36 +73,7 @@ visibility: hidden;
 .menu {
   display: none;
 }
-/*
-.plus:after {
-  visibility: hidden;
-  content: "";
-  display: block;
-  border-top: 3px solid #fff;
-  margin-top: -3px;
-  transform: rotate(90deg);
-}*/
 
-/*  width: 100%;
-  height: 100%;
-  position: relative;
-  top: -85px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  transform-origin: 0 0;
-}*/
-/*
-.hamburger-container.open {
-  visibility: hidden;
-  transform: rotate(-50deg);
-}
-
-.page.open {
-  visibility: hidden;
-  transform: rotate(-30deg);
-}
-*/
 
 .main {
   padding: 15rem 5rem 2rem 5rem;
@@ -259,6 +215,33 @@ a {
   font-size: 0.6rem;
 }
 
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 26px;
+  }
+
+  .main {
+    margin: 6rem 10rem 5rem 5rem;
+  }
+
+  .main h1, h3 {
+    font-size: 170%;
+  }
+
+  .toggle-wrapper {
+    left: 8.5rem;
+  }
+
+  .toggle-item {
+    width: 5.8rem;
+    margin-bottom: 80%;
+  }
+
+  .toggle-item a{
+    font-size: 150%;
+  }
+}
+
 @media screen and (max-width: 480px){
   html {
     font-size: 14px;
@@ -347,15 +330,4 @@ a {
     transform: rotate(-30deg);
   }
 
-}
-
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 26px;
-  }
-
-  .main {
-    margin-left: 10rem;
-    margin-right: 10rem;
-  }
 }
