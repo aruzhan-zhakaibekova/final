@@ -5,7 +5,7 @@ var menu = document.querySelector('.menu');
 		if (ham.classList.contains('open')) {
 			pageBody.classList.remove('open');
 			ham.classList.remove('open');
-      menu.style.display = "none"
+      menu.style.display = "none";
 		} else {
 			pageBody.classList.add('open');
 			ham.classList.add('open');
