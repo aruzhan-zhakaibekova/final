@@ -1,19 +1,20 @@
-var ham = document.querySelector('.hamburger-container');
+var ham = document.querySelector('.hamburger-container'); //hamburger menu for mobile setting things up
 var	pageBody = document.querySelector('.page');
 var menu = document.querySelector('.menu');
-    ham.onclick = function () {
+    ham.onclick = function () { //hamburger menu for mobile: rotate the menu and page, show links in menu, change page z-index to make link clickable
 		if (ham.classList.contains('open')) {
 			pageBody.classList.remove('open');
 			ham.classList.remove('open');
       menu.style.display = "none";
 		} else {
 			pageBody.classList.add('open');
+      pageBody.style.zIndex = "-1";
 			ham.classList.add('open');
       menu.style.display = "block";
 		}
 	};
 
-var container = document.getElementById("container");
+var container = document.getElementById("container"); //baursak toggle, show container with p5.js animation on toggle
 var btn = document.querySelector('#baursak')
 btn.onclick = function () {
   if (container.style.display === "block") {
@@ -24,7 +25,7 @@ btn.onclick = function () {
 };
 
 
-
+//p5.js animation, emulated from https://p5js.org/examples/simulate-soft-body.html
 let centerX = 0.0, centerY = 0.0;
 
 let radius = 50, rotAngle = -90;
@@ -47,7 +48,7 @@ let frequency = [];
 let organicConstant = 1.0;
 
 function setup() {
-  var canvas =   createCanvas(windowWidth, windowHeight);
+  var canvas =   createCanvas(windowWidth, windowHeight); //anchor the canvas on the container needed, make full screen
   canvas.parent('container');
   background(255, 0, 200);
 
@@ -74,12 +75,12 @@ function setup() {
   }
 
 
-  function windowResized() {
+  function windowResized() { //if the window is resized
   resizeCanvas(windowWidth, windowHeight);
 }
 
   function draw() {
-     clear();
+     clear(); //make canvas transparent
     //fade background
     fill(0, 100);
     rect(0, 0, width, height);

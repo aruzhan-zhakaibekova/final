@@ -11,7 +11,7 @@ body {
   background: #2e394d;
 }
 
-input {
+input { /*baursak toggle, hide default checkbox*/
   height: 2vh;
   left: 0;
   opacity: 0;
@@ -20,7 +20,7 @@ input {
   width: 2vw;
 }
 
-#container{
+#container{  /*container where the p5.js animation goes, display changes via JS*/
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -32,7 +32,7 @@ input {
 }
 
 
-.hamburger-container {
+.hamburger-container { /*hamburger menu for mobile, display changes via JS*/
   display: none;
   background-color: cadetblue;
   width: 200px;
@@ -48,7 +48,7 @@ input {
   z-index: 10;
 }
 
-.hamburger {
+.hamburger { /*hamburger menu for mobile, display changes via JS*/
   display: none;
   width: 22px;
   position: absolute;
@@ -59,7 +59,7 @@ input {
   top: 136px;
 }
 
-.plus {
+.plus { /*the x symbol for mobile hamburger menu*/
   display: none;
   width: 20px;
   position: absolute;
@@ -70,12 +70,12 @@ input {
   top: 165px;
 }
 
-.menu {
+.menu { /*the links in the hamburger menu*/
   display: none;
 }
 
 
-.main {
+.main { /*main content styling*/
   padding: 15rem 5rem 2rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -87,7 +87,7 @@ input {
   padding: 0.5rem 0.8rem 0.5rem 0;
 }
 
-.main h1:hover {
+.main h1:hover { /*Kazakh ornament shows when hovering over name*/
   background-image: url("ornament.png");
   background-size: cover;
   z-index: 2;
@@ -98,7 +98,7 @@ a {
   z-index: 2;
 }
 
-.toggle-wrapper {
+.toggle-wrapper { /*baursak toggle wrapper styling*/
   width: 10rem;
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ a {
   left: 5vw;
 }
 
-.name {
+.name { /*baursak toggle text*/
   position: absolute;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   top: 5.5rem;
@@ -117,12 +117,12 @@ a {
   font-size: 0.8rem;
 }
 
-.toggle {
+.toggle { /*baursak toggle styling*/
   position: relative;
   display: inline-block;
 }
 
-.toggle-item {
+.toggle-item {/*baursak toggle styling*/
   width: 6.4em;
   background: cadetblue;
   height: 3em;
@@ -135,7 +135,7 @@ a {
   cursor: pointer;
 }
 
-.toggle-item:before {
+.toggle-item:before { /*baursak toggle styling*/
   display: block;
   transition: all 0.2s ease;
   width: 2.3em;
@@ -147,10 +147,10 @@ a {
   transition: 0.3s ease;
 }
 
-.baursak-bowl label:before {
+.baursak-bowl label:before { /*baursak toggle styling*/
   content: none;
 }
-.baursak-bowl .baursaks {
+.baursak-bowl .baursaks { /*baursak toggle animation*/
   transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .baursak-bowl .bowl {
@@ -165,7 +165,7 @@ a {
   transition: 0.4s ease;
 }
 
-.baursak-bowl .baursak {
+.baursak-bowl .baursak {/*baursak toggle: the baursak itself styling*/
   background: #ed9c32;
   width: 14px;
   height: 16px;
@@ -178,14 +178,14 @@ a {
   box-shadow: 0 2px 0 2px #e8b858;
 }
 
-.baursak-bowl .baursak:nth-child(3) {
+.baursak-bowl .baursak:nth-child(3) { /*baursak toggle: baursak that appear when toggled*/
   left: 20px;
   top: 25px;
   transform: scale(0);
   transition: 0.2s ease 0.2s;
 }
 
-.baursak-bowl .baursak:nth-child(4) {
+.baursak-bowl .baursak:nth-child(4) { /*baursak toggle: baursak that appear when toggled*/
   top: 16px;
   left: 32px;
   transform: scale(0);
@@ -204,7 +204,7 @@ a {
   transition-delay: 0.4s;
 }
 
-.footer {
+.footer { /*footer styling*/
   position: fixed;
   bottom: 0;
   right: 5vw;
@@ -215,87 +215,96 @@ a {
   font-size: 0.6rem;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) { /*media query for iMac screen*/
   html {
-    font-size: 26px;
+    font-size: 26px; /*changing sizes*/
   }
 
-  .main {
+  .main { /*changing position*/
     margin: 6rem 10rem 5rem 5rem;
   }
 
   .main h1, h3 {
-    font-size: 170%;
+    font-size: 170%;/*changing sizes*/
   }
 
-  .toggle-wrapper {
-    left: 8.5rem;
+  .toggle-wrapper { /*changing position, sizes*/
+    justify-content: flex-start;
+    width: 20rem;
+    left: 9.5rem;
   }
 
-  .toggle-item {
+  .toggle-item { /*changing position*/
     width: 5.8rem;
     margin-bottom: 80%;
   }
-
-  .toggle-item a{
-    font-size: 150%;
+  .baursak-bowl .baursak { /*changing position, sizes*/
+    width: 1rem;
+    height: 1rem;
   }
+
+  .name { /*changing sizes*/
+    font-size: 130%;
+    width: 15rem;
+  }
+
 }
 
-@media screen and (max-width: 480px){
-  html {
+@media screen and (max-width: 480px){ /*media query for phone screen*/
+  html { /*changing sizes*/
     font-size: 14px;
   }
 
-  .main {
+  .main { /*changing the display, from flex to block*/
     display: block;
   }
 
-  .about-me {
+  .about-me { /*changing position*/
     margin-top: 50%;
   }
 
-  .links {
+  .links { /*do not show links, menu will be used instead*/
     visibility: hidden;
   }
 
-  .toggle-wrapper {
+  .toggle-wrapper { /*changing sizes*/
     width: 13rem;
     top: 20%;
     left: 2.8rem;
   }
 
-  .toggle-item {
+  .toggle-item { /*changing sizes*/
     width: 8rem;
   }
 
-  .name {
+  .name { /*changing sizes*/
     top: 7rem;
     left: 2.8rem;
     font-size: 0.8rem;
   }
-  .hamburger-container {
+
+  .hamburger-container { /*hamburger menu for mobile*/
     display: block;
   }
 
-  .hamburger {
+  .hamburger { /*hamburger menu for mobile*/
     display: block;
   }
 
-  .hamburger:after {
+  .hamburger:after { /*hamburger menu for mobile*/
     content: "";
     display: block;
     border-top: 2px solid #fff;
     margin-top: 4px;
   }
-  .hamburger:before {
+  .hamburger:before { /*hamburger menu for mobile*/
     content: "";
     display: block;
     border-top: 2px solid #fff;
     margin-top: 4px;
   }
 
-  .plus {
+  .plus { /*hamburger menu for mobile*/
     display: block;
     width: 20px;
     position: absolute;
@@ -305,7 +314,7 @@ a {
     left: 86px;
     top: 165px;
   }
-  .plus:after {
+  .plus:after { /*hamburger menu for mobile animation*/
     content: "";
     display: block;
     border-top: 3px solid #fff;
@@ -313,7 +322,7 @@ a {
     transform: rotate(90deg);
   }
 
-  .page {
+  .page { /*hamburger menu for mobile animation*/
     position: relative;
     top: -100px;
     -webkit-transition: all 0.3s ease;
@@ -322,11 +331,11 @@ a {
     transform-origin: 0 0;
   }
 
-  .hamburger-container.open {
+  .hamburger-container.open { /*hamburger menu for mobile animation when menu opens, rotate menu*/
     transform: rotate(-50deg);
   }
 
-  .page.open {
+  .page.open { /*hamburger menu for mobile, animation when manu opens - page rotates*/
     transform: rotate(-30deg);
   }
 

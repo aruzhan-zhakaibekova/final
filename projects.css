@@ -12,7 +12,7 @@ body {
   position: relative;
 }
 
-.homebutton {
+.homebutton { /*home button for desktops, laptops*/
     right: 8%;
     width: 5rem;
     padding-top: 20px;
@@ -40,7 +40,7 @@ body {
     text-decoration: none;
 }
 
-.hamburger-container {
+.hamburger-container { /*hamburger menu for mobile, display changes via JS*/
   display: none;
   background-color: cadetblue;
   width: 200px;
@@ -56,33 +56,18 @@ body {
   z-index: 10;
 }
 
-.hamburger {
+.hamburger { /*hamburger menu for mobile, display changes via JS*/
   display: none;
   width: 22px;
   position: absolute;
   left: 142px;
   border-top: 2px solid #fff;
   cursor: pointer;
-  z-index: 1;
+  z-index: 9999;
   top: 136px;
 }
-/*
-.hamburger:after {
-  visibility: hidden;
-  content: "";
-  display: block;
-  border-top: 2px solid #fff;
-  margin-top: 4px;
-}
-.hamburger:before {
-visibility: hidden;
-  content: "";
-  display: block;
-  border-top: 2px solid #fff;
-  margin-top: 4px;
-}
-*/
-.plus {
+
+.plus { /*the x symbol for mobile hamburger menu*/
   display: none;
   width: 20px;
   position: absolute;
@@ -93,7 +78,7 @@ visibility: hidden;
   top: 165px;
 }
 
-.menu {
+.menu { /*the links in the hamburger menu*/
   display: none;
   z-index: 2;
 }
@@ -107,12 +92,12 @@ h1 {
   margin-top: 2rem;
 }
 
-.project-pic {
+.project-pic { /*styling project image*/
   max-width: 50%;
   height: auto;
 }
 
-.projects-container {
+.projects-container { /*display projects as grid for desktops*/
   display:grid;
   grid-column: 1;
   grid-row: 4;
@@ -120,29 +105,29 @@ h1 {
   width: 100%;
   padding: 1rem;
 }
-.projects-title {
+.projects-title { /*style text in project card*/
   text-align: center;
   margin-bottom: 1rem;
   top: 50%;
 }
 
 
-.project-container p, a {
+.project-container p, a { /*style text in project card*/
   color: #2e394d;
   padding: 0.4rem;
 }
 
-.project-container h3 {
+.project-container h3 { /*style text in project card*/
   color: #ed9c32;
   padding: 0.4rem;
 }
 
 
-.project-details {
+.project-details { /*style text in project card*/
   top: 50%;
 }
 
-.project-card {
+.project-card { /*style project card*/
   background-color: #fff;
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
@@ -155,16 +140,16 @@ h1 {
 }
 
 
-.contact {
+.contact { /*contact page */
   margin-top: 2rem;
 }
 
-.contact h2 {
+.contact h2 { /*contact page heading text*/
   text-align: center;
   margin-bottom: var(--bottom-margin-2);
 }
 
-.contact-form-container {
+.contact-form-container { /*contact me form styling */
   max-width: 40.75rem;
   margin: 0 auto;
   padding: 0.938rem;
@@ -173,18 +158,18 @@ h1 {
 
 }
 
-.contact-form-container label {
+.contact-form-container label {/*contact me form styling */
   line-height: 2.7em;
   font-weight: var(--bold-font);
   color: #ed9c32;
 }
 
-.contact-form-container textarea {
+.contact-form-container textarea {/*contact me form styling */
   min-height: 6.25rem;
   font-size: 14px;
 }
 
-.contact-form-container .input-field {
+.contact-form-container .input-field {/*contact me form styling */
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -195,7 +180,7 @@ h1 {
   outline: none;
 }
 
-.submit-btn {
+.submit-btn { /*contact me form submit button styling */
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -207,13 +192,13 @@ h1 {
   transition: var(--transition);
 }
 
-.submit-btn:hover {
+.submit-btn:hover {/*contact me form, submit button on hover styling */
   background-color: #ed9c32;
   border: 2px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
-.socials {
+.socials { /*social media icons styling and position*/
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -221,12 +206,12 @@ h1 {
   bottom: 50%;
 }
 
-.socicon {
+.socicon { /*social media icons styling*/
   width: 2rem;
   height: 2rem;
 }
 
-.footer {
+.footer { /*footer styling*/
   position:absolute;
   bottom: 0;
   right: 3rem;
@@ -236,105 +221,102 @@ h1 {
   font-size: 0.6rem;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) { /*media query for iMac screen*/
   html {
-    font-size: 26px;
+    font-size: 26px;/*changing sizes*/
   }
   .projects h1 {
-    font-size: 200%;
+    font-size: 200%;/*changing sizes*/
   }
 
   .projects h3 {
-    font-size: 130%;
+    font-size: 130%;/*changing sizes*/
   }
   .projects p, a {
-    font-size: 110%;
+    font-size: 110%;/*changing sizes*/
   }
   .homebutton {
-    padding: 2rem;
+    padding: 2rem;/*changing position*/
   }
   .homebutton a {
     padding: 1rem;
-    text-align: center;
+    text-align: center; /*changing position*/
   }
 
-  .projects-container .project-card {
+  .projects-container .project-card { /*changing position*/
     margin-left: 14rem;
     text-align: center;
   }
-  .contact {
+  .contact {/*changing position*/
     padding-top: 8rem;
     padding-right: 14rem;
   }
-  .contact-form {
+  .contact-form { /*changing sizes*/
     min-width: 150%;
     min-height: 150%;
   }
 
-  .contact h2 {
+  .contact h2 {/*changing sizes*/
     font-size: 200%;
   }
 
-  .homebutton {
+  .homebutton {/*changing sizes*/
     width: 10rem;
   }
-  .socials {
+  .socials {/*changing position*/
     bottom: 40%;
   }
-  .socicon {
+  .socicon { /*changing sizes*/
     width: 3.5rem;
     height: 3.5rem;
   }
 
-  .footer {
+  .footer { /*changing position*/
     bottom: -10%;
     right: 10rem;
   }
 
 }
 
-@media screen and (max-width: 480px){
-  html {
+@media screen and (max-width: 480px){ /*media query for phone screen*/
+  html { /*changing sizes*/
     font-size: 12px;
   }
 
-.projects-container {
+.projects-container { /*changing sizes*/
   padding: 0;
 }
-  .project-card {
+  .project-card { /*changing the display, from flex to block*/
     display: block;
     margin: 1rem 1rem 1rem 1rem;
   }
 
-  .homebutton {
+  .homebutton { /*do not show home button in mobile*/
     visibility: hidden;
   }
 
-  .hamburger-container {
+  .hamburger-container { /*hamburger menu for mobile*/
     display: block;
   }
 
-  .hamburger-container a{
-    color: white;
-  }
-  .hamburger {
+  .hamburger { /*hamburger menu for mobile*/
     display: block;
   }
 
-  .hamburger:after {
+  .hamburger:after {/*hamburger menu for mobile*/
     content: "";
     display: block;
     border-top: 2px solid #fff;
     margin-top: 4px;
   }
-  .hamburger:before {
+  .hamburger:before {/*hamburger menu for mobile*/
     content: "";
     display: block;
     border-top: 2px solid #fff;
     margin-top: 4px;
   }
 
-  .plus {
+  .plus {/*hamburger menu for mobile animation*/
     display: block;
     width: 20px;
     position: absolute;
@@ -344,7 +326,7 @@ h1 {
     left: 86px;
     top: 165px;
   }
-  .plus:after {
+  .plus:after {/*hamburger menu for mobile animation*/
     content: "";
     display: block;
     border-top: 3px solid #fff;
@@ -352,7 +334,7 @@ h1 {
     transform: rotate(90deg);
   }
 
-  .page {
+  .page {/*hamburger menu for mobile animation*/
     position: relative;
     top: -100px;
     -webkit-transition: all 0.3s ease;
@@ -361,23 +343,24 @@ h1 {
     transform-origin: 0 0;
   }
 
-  .hamburger-container.open {
+  .hamburger-container.open { /*hamburger menu for mobile animation when menu opens, rotate menu*/
     transform: rotate(-50deg);
   }
 
-  .page.open {
+  .page.open { /*hamburger menu for mobile, animation when manu opens - page rotates*/
     transform: rotate(-30deg);
   }
-  .menu a{
+
+  .menu a {
     color: white;
   }
 
-  .contact {
+  .contact { /*changing position*/
     max-width: 70%;
     padding: 11rem 7rem 11rem 5rem;
   }
 
-  .socials {
+  .socials { /*changing the display and position for socials*/
     display: block;
     bottom: 30%;
     left: 50%;
